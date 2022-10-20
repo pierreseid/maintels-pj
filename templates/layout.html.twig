@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+{% block title %}MAINTELS{% endblock %}
+{% block body %}
+       <header>
+        <div class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
+              >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" class="navbar-brand-2" >
+              <img
+                  src="img/Maintels-logo.png"
+                  alt="logo"
+                  style="width: 55px;";
+                  
+              /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav"style=" margin-left: 0px;padding-left: 500px;">
+                <li class="active"><a href="{{path('app_home')}}">Home</a></li>
+                <li><a href="{{path('app_aboutus')}}">About Us</a></li>
+                {# <li><a href="{{path('app_services')}}">Services</a></li> #}
+                <li><a href="{{path('app_portfolio')}}">Portfolio</a></li> 
+                <li><a href="{{path('app_contact')}}">Contact</a></li> 
+                <li><a href="{{ path ('app_login')}}">Login</a></li>
+			    <li><a href="{{path('app_register')}}">Register </a></li> 
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+	<main class="container mt-5 mb-5">
+		{%  for message in app.flashes('error') %}
+			<div class="alert alert-danger text-center">
+				{{message}}</div>
+		{% endfor %}
+		{%  for message in app.flashes('success') %}
+			<div class="alert alert-success text-center">
+				{{message}}</div>
+		{% endfor %}
+		{% block content %}{% endblock %}
+
+	</main>
+   <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="widget">
+					<h4 class="widgetheading">Our Contact : </h4>
+					<address>
+					<strong>MAINTELS</strong><br>
+					Adresse : 12 rue du Laoir CP : 75550<br>
+					Ville : Maril Maly</address>
+					<p>
+						<i class="icon-phone"></i> (+33) 1 45 55 66 54 <br>
+						<i class="icon-envelope-alt"></i> email@domainname.com
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h4 class="widgetheading">Quick Links</h4>
+					<ul class="link-list">
+						<li><a href="#">Latest Events</a></li>
+						<li><a href="#">Terms and conditions</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Career</a></li>
+						<li><a href="#">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h4 class="widgetheading">A propos du Maintels</h4>
+					<ul class="link-list">
+						<li>Capables d’intervenir de bout en bout, tout au long du cycle de vie de vos installations</li>
+						<li>nous avons bâti notre Groupe autour d’une large palette de compétences techniques</li>
+						<li>Nous sommes ingénieurs/concepteurs, intégrateurs, mainteneurs 
+						et opérateurs de solutions multitechniques dans les domaines de l’énergie</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="widget">
+					<h4 class="widgetheading">Environnment</h4>
+					<ul class="link-list">
+						<li>la mécanique et du numérique, promoteurs de la révolution numérique,des Objets Connectés, du Big Data,la cybersécurité</li>
+						<li>l’industrie 4.0, de l’Intelligence Artificielle et de la Réalité mixte</li>
+						<li>Nous ne cessons de nous réinventer</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</footer>
+	  
+{% endblock %}

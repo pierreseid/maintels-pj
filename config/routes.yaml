@@ -1,3 +1,106 @@
 controllers:
-    resource: ../src/Controller/
-    type: attribute
+  resource: ../src/Controller/
+  type: attribute
+
+app_home:
+  path: /
+  controller: App\Controller\HomeController::home
+
+app_aboutus:
+  path: /aboutus
+  controller: App\Controller\AboutUsController::aboutus
+app_portfolio:
+  path: /portfolio
+  controller: App\Controller\PortfolioController::portfolio
+
+# # app_user:
+# #   path: /user
+# #   controller: App\Controller\UserController::allUsers
+
+# app_services:
+#   path: /services
+#   controller: App\Controller\ServicesController::services
+
+app_contact:
+  path: /contact
+  controller: App\Controller\ContactController::contact
+
+app_register:
+  path: /register
+  controller:
+    App\Controller\RegistrationController::register
+    #[Route(path: '/login', name: 'app_login')]
+app_login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+app_logout:
+  path: /logout
+  controller: App\Controller\SecurityController::logout
+# app_admin:
+#   path: /admin
+#   controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+#   defaults:
+#     template: "admin/gestion-user.html.twig"
+
+# # app_allChambres:
+# #   path: /chambres
+# #   controller: App\Controller\ChambreController::allChambres
+
+# # app_:
+# #   path: /chambre
+# #   controller: App\Controller\ChambreController::chambre
+
+# app_be_admin:
+#   path: /passer_admin/{id}
+#   controller: App\Controller\SecurityController::passerAdmin
+#   requirements:
+#     id: '\d+'
+
+# app_admin_allUsers:
+#   path: /admin/users
+#   controller: App\Controller\AdminController::allUsers
+# # app_select:
+# #   path: /chambre/{id}
+# #   controller: App\Controller\ChambreController::select
+# #   requirements:
+# #     id: '\d+'
+
+# #  app_admin_addUser:
+# #   path: /admin/addUser
+# #   controller: App\Controller\AdminController::addUser
+
+# # app_admin_updateUser:
+# #   path: /admin/updateUser/{id}
+# #   controller: App\Controller\AdminController::updateUser
+# #   requirements:
+# #     id: '\d+'
+
+# # app_admin_deleteUser:
+# #   path: /admin/deleteUser/{id}
+# #   controller: App\Controller\AdminController::deleteUser
+# #   requirements:
+# #     id: '\d+'
+
+# # app_admin_deletePhoto:
+# #   path: /admin/deletePhoto/{id}
+# #   controller: App\Controller\AdminController::deletePhoto
+# #   requirements:
+# #     id: '\d+'
+
+# # app_book:
+# #   path: /book
+# #   controller: App\Controller\ReservationController::book
+
+# # app_bookAction:
+# #   path: /bookaction/{id}
+# #   controller: App\Controller\ReservationController::bookaction
+# #   requirements:
+# #     id: '\d+'
+
+# # app_panier:
+# #   path: /panier
+# #   controller: App\Controller\PanierController::panier
+# #   requirements:
+# #     id: '\d+'
+
